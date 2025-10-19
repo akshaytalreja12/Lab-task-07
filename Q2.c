@@ -1,18 +1,21 @@
 #include <stdio.h>
 int main(){
-	int a,b,c,d;
-	printf("Enter the Number to check it is prime or not :  ");
-	scanf("%d",&a);
-	if (a<=1){
-		printf("The number %d is not prime",a);
-		return 0;
+	int mark[10];
+	int k;
+	int high[10]={0},i,j=0;
+	printf("Enter the marks : ");
+	for(i=0;i<10;i++){
+		scanf("%d",&mark[i]);
+	
 	}
-	else{
-	for(b=2;b<=a/b;b++){
-		if (a%b==0){
-			printf("THe number %d is not prime",a);
-			return 0;
-	}}
-}
-printf("the number is %d prime",a);
+	for(i=0;i<10;i++){
+		if (high[j]> mark[i+1]){
+			high[j]=high[j];
+		}
+		else {
+			high[j]=mark[i+1];
+		}
+	}
+	printf("The highest marks is %d,",high[j]);
+	return 0;
 }
